@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;900&display=swap');
+
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: #fff;
+  background: #000;
+  overflow-x: hidden;
+}
+
+/* خلفية النجوم */
+#particles-js {
+  position: fixed;
+  width: 100%; height: 100%;
+  top: 0; left: 0;
+  z-index: -1;
+}
+
+/* الهيدر */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0; left: 0;
+  padding: 20px 50px;
+  display: flex; justify-content: space-between; align-items: center;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+header .logo {
+  font-size: 1.8em;
+  font-weight: 900;
+  color: #00f7ff;
+}
+header nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+header nav a:hover {
+  color: #ff007f;
+}
+
+/* hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; align-items: center;
+  text-align: center;
+  background: transparent;
+  animation: fadeIn 3s ease-in-out;
+}
+.hero .title {
+  font-size: 3em;
+  animation: neon 2s infinite alternate;
+}
+.hero .title span { color: #ff007f; }
+.hero .subtitle {
+  font-size: 1.3em;
+  color: #ccc;
+  margin: 15px 0 30px;
+}
+.btn {
+  padding: 12px 30px;
+  border-radius: 30px;
+  background: #00f7ff;
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #ff007f;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* socials */
+.socials {
+  padding: 100px 20px;
+  text-align: center;
+  background: #111;
+}
+.socials h2 { margin-bottom: 30px; }
+.socials .icons a {
+  margin: 0 20px;
+  font-size: 2.5em;
+  color: #fff;
+  transition: transform 0.4s, color 0.4s;
+}
+.socials .icons a:hover {
+  color: #00f7ff;
+  transform: rotate(15deg) scale(1.2);
+}
+
+/* contact */
+.contact {
+  padding: 100px 20px;
+  background: #1a1a1a;
+  text-align: center;
+}
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex; flex-direction: column;
+}
+.contact input, .contact textarea {
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+}
+.contact button {
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  background: #00f7ff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.contact button:hover {
+  background: #ff007f;
+  color: #fff;
+}
+
+/* footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #000;
+  color: #777;
+}
+
+/* animations */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(50px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+@keyframes neon {
+  from {text-shadow: 0 0 10px #00f7ff;}
+  to {text-shadow: 0 0 40px #ff007f, 0 0 80px #00f7ff;}
+}
