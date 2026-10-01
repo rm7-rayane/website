@@ -49,17 +49,20 @@ header nav a:hover {
 
 /* hero */
 .hero {
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: center; align-items: center;
   text-align: center;
   background: transparent;
   animation: fadeIn 3s ease-in-out;
+  padding: 110px 20px 40px;
 }
 .hero .title {
   font-size: 3em;
   animation: neon 2s infinite alternate;
+  max-width: 100%;
 }
 .hero .title span { color: #ff007f; }
 .hero .subtitle {
@@ -84,20 +87,52 @@ header nav a:hover {
 
 /* socials */
 .socials {
-  padding: 100px 20px;
+  padding: 28px 12px 0;
   text-align: center;
-  background: #111;
+  width: 100%;
 }
-.socials h2 { margin-bottom: 30px; }
+.socials h2 { margin-bottom: 16px; font-size: 1.1rem; }
+.socials .icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
 .socials .icons a {
-  margin: 0 20px;
-  font-size: 2.5em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  font-size: 1.7em;
   color: #fff;
   transition: transform 0.4s, color 0.4s;
 }
 .socials .icons a:hover {
   color: #00f7ff;
   transform: rotate(15deg) scale(1.2);
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 105px 16px 32px;
+  }
+  .hero .title {
+    font-size: clamp(2rem, 9vw, 2.6rem);
+  }
+  .hero .subtitle {
+    font-size: 1.05rem;
+  }
+  .socials {
+    padding-top: 24px;
+  }
+  .socials .icons {
+    gap: 6px;
+  }
+  .socials .icons a {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 /* contact */
